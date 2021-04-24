@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background:linear-gradient(to right,#2a2a2a,#212121,#191919,#010002);
+		}
+		.gradient{
+			position: relative;
+			margin: 30px auto 0;
+			width: 300px;
+			height: 450px;
+			background:#000;
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 25px;
+		}
+		h1{
+			position: relative;
+			font-family: "releway";
+			font-size: 20px;
+			color: #fff;
+			font-width:300px;
+			text-align: center;
+		}
+		.gradient:before,
+		.gradient:after{
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			background:linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+			background-size: 400% 400%;
+			width: calc(100% + 6px);
+			height: calc(100% + 6px);
+			border-radius: 20px;
+			z-index: -1;
+			animation: animate 3s ease alternate infinite;
+		}
+		.gradient:after{
+			filter: blur(20px);
+		}
+		@keyframes animate{
+			0%{
+				background-position: 0% 50%;
+			}
+			50%{
+				background-position: 100% 50%;
+			}
+			0%{
+				background-position: 0% 50%;
+			}
+		}
+	</style>
+</head>
+<body
+	<div class="gradient">
+		<h1>WELCOME<br>TO<br>MY WEB SITE<br><br><br><u>Fahmi Mhemdi</u></h1>
+	</div>
+</body>
+</html>

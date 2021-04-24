@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D card:</title>
+
+    <style type="text/css">
+
+    	body{
+    		font-family: "Raleway", sans-serif;
+    		background:#eee;
+    	}
+
+    	.wrapper{
+    		position: absolute;
+    		top: 10%;
+    		left: 40%;
+    		width: 300px;
+    		height: 500px;
+    		perspective: 900px;
+    	}
+
+    	.container{
+    		position: absolute;
+    		top: 0%;
+    		width: 100%;
+    		height: 100%;
+    		transition: .5s all ease;
+    		transform: rotateX(60deg) scale(0.7);
+    		perspective: 900px;
+    		box-shadow: 0px 20px 50px #555;
+    		animation: entry 1s linear 1;
+    	}
+
+    	#c0{
+    		position: absolute;
+    		top: 0;
+    		width: 100%;
+    		height: 100%;
+    		background: linear-gradient(to bottom,#eba65b 30%, #d99267 100%);
+    		z-index: 300;
+    		box-shadow: 0px 20px 100px #555;
+    	}
+
+    	#c1{
+    		background: linear-gradient(to bottom,#59476f 30%,#7b88d1 100%);
+    		box-shadow: 0px 20px 100px #555;
+    		left: 100%;
+    		z-index: 0;
+    	}
+
+    	#c2{
+    		background: linear-gradient(to bottom,#59476f 30%,#7b88d1 100%);
+    		box-shadow: 0px 20px 100px #555;
+    		left: -100%;
+    		z-index: 0;
+    	}
+
+    	.image{
+    		display:flex;
+    		justify-content: center;
+    		align-items: center;
+    		position: absolute;
+    		top: 0%;
+    		left: 0%;
+    		width: 100%;
+    		height: 45%;
+    		background:linear-gradient(to top ,#eba65b 30%,#d99267 100%);
+    	}
+
+    	#i1,#i2{
+    		background: linear-gradient(to bottom,#59476f 30%,#7b88d1 100%);
+    	}
+
+    	.app img{
+    		display: block;
+    		margin: auto;
+    		width: 70%;
+    		height: 70%;
+    	}
+
+    	.container:hover{
+    		cursor: pointer;
+    		transform: rotate(0deg) scale(1) translateY(10px);
+    		transition: .5s all ease;
+    		z-index: 400;
+    	}
+
+    	.desc{
+    		position: absolute;
+    		top: 45%;
+    		left: 0;
+    		height: 55%;
+    		width: 100%;
+    		background:linear-gradient(to bottom ,#eba65b 0%, #d99267 40%);
+    		z-index: 30;
+    	}
+
+    	#s1{
+    		background: linear-gradient( to top ,#5b62a2 0%,#7b88d1 100%);
+    	}
+
+    	#s2{
+    		background: linear-gradient( to top ,#5b62a2 0%,#7b88d1 120%);
+    	}
+
+    	.info{
+    		position: absolute;
+    		top: 10%;
+    	}
+
+    	h1{
+    		text-align: center;
+    		color: #333;
+    		text-shadow: 0px 0px 10px #eee;
+    	}
+
+    	h3{
+    		text-align: center;
+    		letter-spacing: 2px;
+    		color: #eee;
+    		text-shadow: 0px 0px 10px #eee;
+    	}
+
+    	p{
+    		color:14px;
+    		text-align: center;
+    		color: #fff;
+    		line-height: 150%;
+    		padding:0px 20px 20px 20px;
+    	}
+
+    	@keyframes entry{
+    		0%{
+    			top: -20px;
+    			opacity: 0.1;
+    		}
+    		100%{
+    			top: 10px;
+    		}
+    	}
+
+    </style>
+
+
+</head>
+<body>
+     <div class="wrapper">
+     	<h1>SKILLS:</h1>
+
+     	<div class="container"  id="c0">
+     		<div class="image" id="i0">
+     			<div class="app">
+     				<img src="i0.png">
+     			</div>
+     		</div>
+
+     		<div class="desc" id="s0">
+     			<div class="info">
+     				<h3>Graphic Design</h3>
+     				<p><u>Tools:</u></p>
+						<ul>
+							<li>Adobe illustrator</li>
+							<li>Adobe photoshop</li>
+						</ul>
+					</p>
+     			</div>
+     		</div>
+     	</div>
+
+
+
+       	<div class="container"  id="c1">
+     		<div class="image" id="i1">
+     			<div class="app">
+     				<img src="i1.png">
+     			</div>
+     		</div>
+
+     		<div class="desc" id="s1">
+     			<div class="info">
+     				<h3>Development:</h3>
+     				<p>
+     					<p><u>Languages:</u></p>
+							<ul>
+								<li>c#</li>
+								<li>Python</li>
+								<li>JavaScript</li>
+								<li>SQL</li>
+							</ul>
+     				</p>
+     			</div>
+     		</div>
+     	</div>
+
+
+
+       	<div class="container"  id="c2">
+     		<div class="image" id="i2">
+     			<div class="app">
+     				<img src="i2.png">
+     			</div>
+     		</div>
+
+     		<div class="desc" id="s2">
+     			<div class="info">
+     				<h3>Other Skills:</h3>
+     				<p>
+     					<p><u>Spoken Languages:</u></p>
+							<ul>
+								<li>Arabic:Native</li>
+								<li>English:Fluent</li>
+								<li>French:Intermediate</li>
+							</ul>
+     				</p>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+</body>
+</html>
